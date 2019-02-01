@@ -9,6 +9,8 @@
        
          <input type="button" class="bform" value="View Users"/> &nbsp; &nbsp; <input type="button" class="bform" value="Add New Vaccine" (click)="addvacForm()"/> 
 <br><br>
+
+<form name="form" (ngSubmit)="f.form.valid &&  getByUserId(regid) "  #f="ngForm" novalidate>
             <h2>User Details</h2>
             
 <ul class="users">
@@ -18,7 +20,7 @@
     <span class="badge">{{user.id}}</span> {{user.name}}
   </li>
 </ul>
-            
+</form>  
               
          
           

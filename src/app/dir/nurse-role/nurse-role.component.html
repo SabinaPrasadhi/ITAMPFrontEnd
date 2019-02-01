@@ -1,4 +1,6 @@
 <app-navtwo></app-navtwo>
+
+<form name="form" (ngSubmit)="f.form.valid &&  viewData() && getByRegitrationId(regid) "  #f="ngForm" novalidate>  
 <div style="padding-left:30px">
 <div id="form">
      <div id="head">    
@@ -7,6 +9,8 @@
     </div><!--how lock title when scrolling
                                        add hide and show button to fieldset-->                                                 
     <!--form (ngSubmit)="f.form.valid && submitRegistration()" #f="ngForm" novalidate-->
+
+   
             <div>
                     
                  
@@ -424,3 +428,4 @@
         </div>
         <input type="button" class="bform" value="Update" (click)="updateForm()"/>
         </div>
+</form>

@@ -40,7 +40,7 @@ childdetails:Child[];
        });
      }
 
-    getByRegistrationId(regid: any){
+    getByRegitrationId(regid: any){
       this.childdetails.forEach(element => {
         if(element.registrationId==regid){
                   this.child=element;

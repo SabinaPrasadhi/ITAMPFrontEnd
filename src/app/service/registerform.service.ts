@@ -87,6 +87,11 @@ viewChild(view){
 return  this.http.post<Child>(this.url+"/api",view);
 }
 
+/*viewUser(user){
+  console.log(user);
+  return  this.http.post<Child>(this.url+"/api",user);
+}*/
+
 updateParent(parent){
   console.log(parent);
 return  this.http.post<Parent>(this.url+"/api",parent);

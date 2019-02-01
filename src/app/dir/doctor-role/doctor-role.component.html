@@ -2,6 +2,7 @@
 
 <app-navone></app-navone>
 
+<form name="form" (ngSubmit)="f.form.valid &&  viewData() && getByRegitrationId(regid) "  #f="ngForm" novalidate>
 <div style="padding-left:30px">
 <div id="form">
      <div id="head">    
@@ -429,7 +430,7 @@
                 </fieldset>               
         </fieldset>
         </div>
-        </div>
+        </div> </form>
 
        
         
