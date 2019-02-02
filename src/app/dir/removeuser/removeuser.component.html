@@ -1,0 +1,28 @@
+<app-navthree></app-navthree>
+<img src="/src/assets/image/admin1.jpg"/>
+
+
+<form name="form" (ngSubmit)="f.form.valid &&  deleteVaccine()" #f="ngForm" novalidate> 
+    <div style="padding-left:30px">
+        <div id="form">
+             <div id="head"> 
+    <button id="bhead" ><b>Remove Users</b></button> 
+    <div>
+        <br>
+        
+        
+
+        <input class=" form-control " formControlName="userId" type="text"  id="userId" name="userId" />
+        <label class="control-label input-label" >User ID : </label>
+         <br>
+         
+        </div>
+   <br>
+  
+   <input type="button" class="bform" id="admin" value="Remove Users" (click)="removeUser()"/>
+    <!--button type="submit"  class="btn btn-secondary">Delete Users</button-->
+
+    &nbsp;&nbsp;&nbsp;
+    <input type="button" class="bform" id="admin" value="View Users Again" (click)="userviewForm()"/>
+  </div></div></div>
+    </form>

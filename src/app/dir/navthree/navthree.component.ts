@@ -21,6 +21,12 @@ export class NavthreeComponent implements OnInit {
     console.log("button click");
   }
 
+  delFunc(){
+    this.router.navigate(["/removeuser"]);
+    console.log("button click");
+
+  }
+
   regFunc(){
     this.router.navigate(["/home"]);
     console.log("button click");

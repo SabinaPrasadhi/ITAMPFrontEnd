@@ -20,6 +20,11 @@ export class NavoneComponent implements OnInit {
     console.log("button click");
   }
 
+  docupdateFunc(){
+    this.router.navigate(["/docupdate"]);
+    console.log("button click");
+  }
+
   ngOnInit() {
     this.userService.cast.subscribe(name=>{
       if(name !="null")

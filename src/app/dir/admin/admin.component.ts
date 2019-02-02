@@ -26,8 +26,8 @@ export class AdminComponent implements OnInit {
                
    } 
 
-  addvacForm(){
-    this.router.navigate(["/vaccine"]);
+  removeForm(){
+    this.router.navigate(["/removeuser"]);
     console.log("button click");
 
   }

@@ -11,6 +11,11 @@ export class NavtwoComponent implements OnInit {
   name_="Dr.jayarathne perera vvvvvvvv";
   constructor(private router: Router,private userService:UserService) { }
 
+  regFunc(){
+    this.router.navigate(["/home"]);
+    console.log("button click");
+  }
+
   nurFunc(){
     this.router.navigate(["/nurserole"]);
     console.log("button click");

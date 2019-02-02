@@ -27,6 +27,11 @@ import { RegisterComponent } from './dir/register/register.component';
 import { UpdateComponent } from './dir/update/update.component';
 import { VaccineComponent } from './dir/vaccine/vaccine.component';
 import { AdminComponent } from './dir/admin/admin.component';
+import { MainComponent } from './dir/main/main.component';
+import { MidwifeComponent } from './dir/midwife/midwife.component';
+import { DocupdateComponent } from './dir/docupdate/docupdate.component';
+import { MidupdateComponent } from './dir/midupdate/midupdate.component';
+import { RemoveuserComponent } from './dir/removeuser/removeuser.component';
 
 
 
@@ -46,7 +51,11 @@ const appRoutes: Routes = [
   { path:'navthree',component:NavthreeComponent},
   { path:'navfour',component:NavfourComponent},
   { path:'navfive',component:NavfiveComponent},
-
+  { path: 'main', component: MainComponent },
+  { path: 'midwife', component: MidwifeComponent },
+  { path: 'docupdate', component: DocupdateComponent },
+  { path: 'midupdate', component: MidupdateComponent },
+  { path: 'removeuser', component: RemoveuserComponent },
   { path:'**',redirectTo:'/login', pathMatch:'full'},
   { path:'',redirectTo:'/login', pathMatch:'full'},
   
@@ -71,6 +80,11 @@ const appRoutes: Routes = [
     NavthreeComponent,
     NavfourComponent,
     NavfiveComponent,
+    MainComponent,
+    MidwifeComponent,
+    DocupdateComponent,
+    MidupdateComponent,
+    RemoveuserComponent,
     
    
   ],

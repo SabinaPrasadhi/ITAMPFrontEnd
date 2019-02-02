@@ -133,6 +133,11 @@ return this.http.post<Guardian>
     (this.url+"/delete",vaccine);
    }
 
+   deleteUser(user){
+    return this.http.delete<User>
+    (this.url+"/delete",user);
+   }
+
   
   getGn(){
    return this.http.get<Gn[]>(this.url+"/gn");

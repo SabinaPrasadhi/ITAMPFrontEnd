@@ -1,0 +1,22 @@
+#gender{
+    position: absolute;
+    left:55%;
+    top:85%;
+    z-index: 8;
+    
+}
+
+#mw{
+    background-image:  url(/src/assets/image/doc1.jpg);
+     background-color: rgba(156, 150, 150, 0.09);
+     background-size: 1366px 637px;
+     resize: both;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; 
+} 
+
+#midwife{
+
+    font-weight:bold;
+}

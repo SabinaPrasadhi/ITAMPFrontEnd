@@ -1,26 +1,36 @@
 <app-navthree></app-navthree>
+<img src="/src/assets/image/admin1.jpg"/>
 
-<div style="padding-left:30px">
-<div id="form">
-     <div id="head">    
-
-    <button id="bhead" ><b>View the List of Users</b></button>
-    </div>
-       
-         <input type="button" class="bform" value="View Users"/> &nbsp; &nbsp; <input type="button" class="bform" value="Add New Vaccine" (click)="addvacForm()"/> 
 <br><br>
 
 <form name="form" (ngSubmit)="f.form.valid &&  getByUserId(regid) "  #f="ngForm" novalidate>
-            <h2>User Details</h2>
+    <div style="padding-left:30px">
+        <div id="form">
+             <div id="head">    
+       
+            <button id="bhead" ><b>View the List of Users</b></button>
+            
+            <div><br>
+             
+              <input type="button" id="admin" class="bform" value="View Users" (click)="getByUserId(regid)"/>
+               &nbsp; &nbsp;
+                <input type="button" id="admin" class="bform" value="Remove Users" (click)="removeForm()"/> 
+              <br><br><h2>User Details</h2></div>
             
 <ul class="users">
   <li *ngFor="let users of Users"
     [class.selected]="user === selectedUsers"
   >
-    <span class="badge">{{user.id}}</span> {{user.name}}
+    <span class="badge">{{user.id}}</span> 
+    <span class="badge">{{user.firstname}}</span>
+    <span class="badge">{{user.lastname}}</span>
+    <span class="badge">{{user.email}}</span>
+    <span class="badge">{{user.contactno}}</span>
+    <span class="badge">{{user.username}}</span>
+    <span class="badge">{{user.userrole}}</span>
   </li>
-</ul>
-</form>  
+</ul></div></div></div>
+</form> 
               
          
           

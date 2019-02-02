@@ -30,6 +30,10 @@ additional:AddInfo=new AddInfo();
 childdetails:Child[];
  constructor(private router: Router, private registerFormService:RegisterformService, private userService:UserService) { }
 
+ docupdateForm(){
+  this.router.navigate(["/docupdate"]);
+  console.log("button click");
+ }
  viewData(){
  this.registerFormService.viewChild(this.child.registrationId).subscribe(
   data=>{

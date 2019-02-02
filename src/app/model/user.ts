@@ -6,6 +6,7 @@ export class User {
      email:String;
      contactno: number;
      password:String;
+     userrole:String;
     
    
 }

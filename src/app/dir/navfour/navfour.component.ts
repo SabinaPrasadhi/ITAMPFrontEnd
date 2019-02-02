@@ -11,8 +11,8 @@ export class NavfourComponent implements OnInit {
   name_="Dr.jayarathne perera vvvvvvvv";
   constructor(private router: Router, private userService:UserService) { }
 
-  reguseFunc(){
-    this.router.navigate(["/register"]);
+  homeFunc(){
+    this.router.navigate(["/main"]);
     console.log("button click");
   }
 

@@ -12,10 +12,16 @@ export class NavfiveComponent implements OnInit {
   constructor(private router: Router,private userService:UserService) { }
 
 
-  vacFunc(){
-    this.router.navigate(["/vaccine"]);
+  midwifeFunc(){
+    this.router.navigate(["/midwife"]);
     console.log("button click");
   } 
+
+  midupdateFunc(){
+    this.router.navigate(["/midupdate"]);
+    console.log("button click");
+  }
+
   ngOnInit() {
     this.userService.cast.subscribe(name=>{
       if(name !="null")

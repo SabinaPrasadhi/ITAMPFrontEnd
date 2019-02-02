@@ -1,7 +1,9 @@
 <app-navtwo></app-navtwo>
 
+<div id="nview">
 <form name="form" (ngSubmit)="f.form.valid &&  viewData() && getByRegitrationId(regid) "  #f="ngForm" novalidate>  
-<div style="padding-left:30px">
+        
+    <div style="padding-left:30px">
 <div id="form">
      <div id="head">    
 
@@ -26,8 +28,8 @@
                             
                 </div> 
                 <br>
-           <button type="submit" class="bform"  >Submit</button>&nbsp;&nbsp;
-            <button type="reset"  class="bform">Reset</button>&nbsp;&nbsp; 
+           <button type="submit" class="bform"  ><b>Submit</b></button>&nbsp;&nbsp;
+            <button type="reset"  class="bform"><b>Reset</b></button>&nbsp;&nbsp; 
             <br>
             <br>
         <div >
@@ -426,6 +428,6 @@
                 </fieldset>               
         </fieldset>
         </div>
-        <input type="button" class="bform" value="Update" (click)="updateForm()"/>
+        <input type="button" class="bform" id="update" value="Update" (click)="updateForm()"/>
         </div>
-</form>
+</form></div>

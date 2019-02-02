@@ -1,15 +1,19 @@
 <app-navfour></app-navfour>
-<img src="/src/assets/image/reg.jpg"/>
+<img src="/src/assets/image/reg3.jpg"/>
 <div id="position">
    <form name="form" (ngSubmit)="f.form.valid && createUser()" #f="ngForm" novalidate>
      
       <h4>Register New User:</h4>
+      <br>
       <div class="form-group">
      
         <i class="fa fa-user icon"></i>
-        <input type="text" class="form-control"  id="firstname"  placeholder="First Name"
+       
+        <label class="control-label input-label">First Name : </label> 
+        <input type="text" class="form-control"  id="firstname" 
         [ngClass]="{ 'is-invalid': f.submitted && firstname.invalid }"
         name="firstname"  [(ngModel)]="user.firstname" #firstname="ngModel" required />
+        
         <div *ngIf="f.submitted && !firstname.valid" class="invalid-feedback">
           <div *ngIf="firstname.errors.required">First Name is required</div>
         </div>
@@ -18,7 +22,8 @@
       <div class="form-group">
      
           <i class="fa fa-user icon"></i>
-          <input type="text" class="form-control"  id="lastname"  placeholder="Last Name"
+          <label class="control-label input-label">Last Name : </label> 
+          <input type="text" class="form-control"  id="lastname"
           [ngClass]="{ 'is-invalid': f.submitted && lastname.invalid }"
           name="lastname"  [(ngModel)]="user.lastname" #lastname="ngModel" required />
           <div *ngIf="f.submitted && !lastname.valid" class="invalid-feedback">
@@ -29,7 +34,8 @@
         <div class="form-group">
      
             <i class="fa fa-user icon"></i>
-            <input type="text" class="form-control"  id="email"  placeholder="Email Address"
+            <label class="control-label input-label">Email Address : </label> 
+            <input type="text" class="form-control"  id="email"
             [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
             name="email"  [(ngModel)]="user.email" #email="ngModel" required />
             <div *ngIf="f.submitted && !email.valid" class="invalid-feedback">
@@ -40,17 +46,31 @@
           <div class="form-group">
      
               <i class="fa fa-user icon"></i>
-              <input type="text" class="form-control"  id="contactno"  placeholder="Contact Number"
+              <label class="control-label input-label">Contact Number: </label> 
+              <input type="text" class="form-control"  id="contactno"  
               [ngClass]="{ 'is-invalid': f.submitted && contactno.invalid }"
               name="contactno"  [(ngModel)]="user.contactno" #contactno="ngModel" required />
               <div *ngIf="f.submitted && !contactno.valid" class="invalid-feedback">
                 <div *ngIf="contactno.errors.required">Contact Number is required</div>
               </div>
             </div>
+<div>
+    <label class="control-label input-label" >User Role: </label>
+            <select class="form-control" [(ngModel)]="user.userrole" name="role" id="role"
+            [ngClass]="{ 'is-invalid': f.submitted && role.invalid }"
+            #role="ngModel" required>
+
+                <option *ngFor="let s of status" >{{user.role}}</option>
+            </select>
+            <div *ngIf="f.submitted && !role.valid" class="invalid-feedback">
+                <div *ngIf="role.errors.required">User Role is required</div>
+        </div>
+          </div>
 
       <div class="form-group">
       <i class="fa fa-user icon"></i>
-      <input type="text" class="form-control"  id="username"  placeholder="User Name"
+      <label class="control-label input-label">User Name : </label> 
+      <input type="text" class="form-control"  id="username"  
       [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
       name="username"  [(ngModel)]="user.username" #username="ngModel" required />
       <div *ngIf="f.submitted && !username.valid" class="invalid-feedback">
@@ -60,13 +80,16 @@
     <div class="form-group">
 
       <i class="fa fa-key icon"></i>
-      <input type="password" class="form-control" id="password" placeholder="Password"
+      <label class="control-label input-label">Password : </label> 
+      <input type="password" class="form-control" id="password"
       [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
       name="password" [(ngModel)]="user.password" #password="ngModel" required />
       <div *ngIf="f.submitted && !password.valid" class="invalid-feedback">
         <div *ngIf="password.errors.required">Password is required</div>
       </div>
     </div>
+
+
     <button type="submit"  class="btn btn-secondary">Add User</button>
     <button type="reset"  class="btn btn-secondary">Clear</button>
     <br><br>
